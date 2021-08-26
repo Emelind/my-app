@@ -14,7 +14,11 @@ const Content = () => {
         <>
             <View 
                 style={{
-                    backgroundColor: color}}>
+                    backgroundColor: color,
+                    width: '100%',
+                    height: '100%',
+                    justifyContent: 'center',
+                    alignItems: 'center'}}>
                 {showWelcome ?
                 <View>
                     <Welcome
@@ -26,6 +30,7 @@ const Content = () => {
         </>
     )
 }
+
 
 export default Content;
 

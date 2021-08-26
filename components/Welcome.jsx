@@ -27,9 +27,9 @@ const Welcome = ({setShowWelcome}) => {
                     flexDirection: 'row',
                     justifyContent: 'space-around',
                     paddingTop: 10}}>
-                <ColorPicker color='green'/>
+                <ColorPicker color='lightgreen'/>
                 <ColorPicker color='purple'/>
-                <ColorPicker color='pink'/>
+                <ColorPicker color='hotpink'/>
                 <ColorPicker color='white'/>
             </View>
         </View>

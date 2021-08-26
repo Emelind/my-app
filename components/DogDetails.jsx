@@ -10,7 +10,11 @@ const DogDetails = ({dogDetails, setShowDogDetails, setDogDetails}) => {
     return(
         <View>
             {dogDetails.name !== '' ?
-            <Text>The name of this dog is {dogDetails.name}</Text>
+            <Text
+                style={{
+                    padding: 10}}>
+                The name of this dog is {dogDetails.name}
+            </Text>
             :
             <View>
                 <Text 
@@ -21,7 +25,8 @@ const DogDetails = ({dogDetails, setShowDogDetails, setDogDetails}) => {
                 <TextInput
                     style={{
                         padding: 10,
-                        borderWidth: 1}}
+                        borderWidth: 1,
+                        backgroundColor: 'white'}}
                     placeholder='Name me!'
                     onChangeText={name => setName(name)}
                 />
