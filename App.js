@@ -1,9 +1,9 @@
 import React from 'react';
 import { View } from 'react-native';
-import Content from './components/Content';
 import { rootReducer } from './features/rootReducer';
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
+import Content from './components/Content';
 
 export default function App() {
 
