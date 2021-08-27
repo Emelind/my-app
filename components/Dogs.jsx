@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import { View, ScrollView, Image, Pressable} from 'react-native';
+import { View, ScrollView, Image, Pressable, Text } from 'react-native';
 import DogDetails from './DogDetails';
 import DogsHeading from './DogsHeading';
 
@@ -52,6 +52,7 @@ const Dogs = () => {
                                 height: 100,
                                 borderRadius: 5 }}
                         />
+                        <Text>{item.name}</Text>
                     </Pressable>
                 </View>
                 ));
