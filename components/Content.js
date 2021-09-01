@@ -1,14 +1,18 @@
 import React from 'react';
 import { useState } from 'react';
-import { View } from 'react-native';
+import { View, Text } from 'react-native';
 import Welcome from './Welcome';
 import Dogs from './Dogs';
-import { useSelector } from 'react-redux';
+import { useSelector, useStore } from 'react-redux';
+import ColorPicker from './ColorPicker';
+import { Provider } from 'react-redux';
 
 const Content = () => {
 
     const [showWelcome, setShowWelcome] = useState(true);
-    const color = useSelector(state => state.color)
+    const color = useSelector(state => state.color);
+
+    const store = useStore();
 
     return (
         <>
@@ -23,6 +27,23 @@ const Content = () => {
                 <View>
                     <Welcome
                         setShowWelcome={setShowWelcome}/>
+                    <Text
+                        style={{
+                        paddingTop:20}}>
+                        Pick a color:
+                    </Text>
+                    <View 
+                        style={{
+                            flexDirection: 'row',
+                            justifyContent: 'space-around',
+                            paddingTop: 10}}>
+                        <Provider store={store}>
+                            <ColorPicker color='lightgreen'/>
+                            <ColorPicker color='purple'/>
+                            <ColorPicker color='hotpink'/>
+                            <ColorPicker color='white'/>
+                        </Provider>
+                    </View>
                 </View>
                 :
                 <Dogs />}

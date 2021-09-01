@@ -1,6 +1,7 @@
 import React from 'react';
 import { Pressable } from 'react-native';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useStore } from 'react-redux';
+import { Provider } from 'react-redux';
 import { setColor } from '../features/color';
 
 const ColorPicker = (props) => {
@@ -11,8 +12,10 @@ const ColorPicker = (props) => {
         dispatch(setColor(props.color));
     }
 
+    const store = useStore()
+;
     return(
-        <>
+        <Provider store={store}>
             <Pressable
                 style={{ 
                     backgroundColor: props.color,
@@ -21,7 +24,7 @@ const ColorPicker = (props) => {
                     borderWidth: 2 }}
                 onPress={() => changeColor()}
             />
-        </>
+        </ Provider>
     )
 }
 

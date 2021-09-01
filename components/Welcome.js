@@ -16,22 +16,9 @@ const Welcome = ({setShowWelcome}) => {
             <Button 
                 onPress={() => setShowWelcome(false)}
                 title='Check out the dogs!'
+                testID='welcomeButton'
             />
-            <Text
-                style={{
-                    paddingTop:20}}>
-                Pick a color:
-            </Text>
-            <View 
-                style={{
-                    flexDirection: 'row',
-                    justifyContent: 'space-around',
-                    paddingTop: 10}}>
-                <ColorPicker color='lightgreen'/>
-                <ColorPicker color='purple'/>
-                <ColorPicker color='hotpink'/>
-                <ColorPicker color='white'/>
-            </View>
+
         </View>
 
     );
